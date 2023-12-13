@@ -1,0 +1,29 @@
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Code</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let company of companies">
+                    <td><span>{{company.id}}</span></td>
+                    <td><span>{{company.code}}</span></td>
+                    <td><span>{{company.description}}</span></td>
+                    <td>
+                        <button class="btn btn-sm btn-info m-1" (click)="openDetails(contentDetails, company)">
+                            <i class="fa fa-search"></i>Details</button>
+                        <button class="btn btn-sm btn-warning m-1" (click)="openEdit(contentEdit, company)">
+                            <i class="fa fa-edit"></i>Edit</button>
+                        <button class="btn btn-sm btn-danger m-1" (click)="openDelete(contentDelete, company)">
+                            <i class="fa fa-remove"></i>Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
