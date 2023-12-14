@@ -68,26 +68,6 @@ export class CompanyListComponent implements OnInit {
 
   }
  
-  //  ngOnInit(): void {
-  //   this.getFriends();
-  //   this.getFriends();
-  //   this.editForm = this.fb.group({
-  //     id: [''],
-  //     firstname: [''],
-  //     lastname: [''],
-  //     department: [''],
-  //     email: [''],
-  //     country: ['']
-  //   } );
-  // }
-  // getCompanies() {
-  //   // this.httpClient.get<any>('https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/479101/information').subscribe(
-  //   //   response => {
-  //   //     console.log(response);
-  //   //     this.friends = response;
-  //   //   }
-  //   // );
-  // }
   onSubmit(f: NgForm) {
     const url = 'http://localhost:8888/friends/addnew';
     this.httpClient.post(url, f.value)
@@ -114,73 +94,8 @@ export class CompanyListComponent implements OnInit {
     }
   }
 
-  // openDetails(targetModal, friend: Friend) {
-  //   this.modalService.open(targetModal, {
-  //    centered: true,
-  //    backdrop: 'static',
-  //    size: 'lg'
-  //  });
-  //   document.getElementById('fname').setAttribute('value', friend.firstname);
-  //   document.getElementById('lname').setAttribute('value', friend.lastname);
-  //   document.getElementById('dept').setAttribute('value', friend.department);
-  //   document.getElementById('email2').setAttribute('value', friend.email);
-  //   document.getElementById('cntry').setAttribute('value', friend.country);
-  // }
+  //getCompanies()
 
-  // openEdit(targetModal, friend: Friend) {
-  //   this.modalService.open(targetModal, {
-  //    centered: true,
-  //    backdrop: 'static',
-  //    size: 'lg'
-  //  });
-  // //   document.getElementById('fname').setAttribute('value', friend.firstname);
-  // //   document.getElementById('lname').setAttribute('value', friend.lastname);
-  // //   document.getElementById('dept').setAttribute('value', friend.department);
-  // //   document.getElementById('email2').setAttribute('value', friend.email);
-  // //   document.getElementById('cntry').setAttribute('value', friend.country);
-  // }
-
-  // openEdit(targetModal, friend: Friend) {
-  //   this.modalService.open(targetModal, {
-  //     backdrop: 'static',
-  //     size: 'lg'
-  //   });
-  //   this.editForm.patchValue( {
-  //     id: friend.id, 
-  //     firstname: friend.firstname,
-  //     lastname: friend.lastname,
-  //     department: friend.department,
-  //     email: friend.email,
-  //     country: friend.country
-  //   });
-  // }
-
-  // onSave() {
-  //   const editURL = 'http://localhost:8888/friends/' + this.editForm.value.id + '/edit';
-  //   console.log(this.editForm.value);
-  //   this.httpClient.put(editURL, this.editForm.value)
-  //     .subscribe((results) => {
-  //       this.ngOnInit();
-  //       this.modalService.dismissAll();
-  //     });
-  // }
-
-  // openDelete(targetModal, friend: Friend) {
-  //   this.deleteId = friend.id;
-  //   this.modalService.open(targetModal, {
-  //     backdrop: 'static',
-  //     size: 'lg'
-  //   });
-  // }
-
-  // onDelete() {
-  //   const deleteURL = 'http://localhost:8888/friends/' + this.deleteId + '/delete';
-  //   this.httpClient.delete(deleteURL)
-  //     .subscribe((results) => {
-  //       this.ngOnInit();
-  //       this.modalService.dismissAll();
-  //     });
-  // }
 
 }
 

@@ -49,5 +49,4 @@ export class CityService {
     this.citiesChanged.next(this.cities.slice());
   }
 
-
 }

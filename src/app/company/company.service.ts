@@ -7,12 +7,15 @@ export class CompanyService {
 
   private companies: Company[] = [
     new Company(
+      1,
       'Company 1',
       'Company 1 Desc'),
       new Company(
+        2,
         'Company 2',
         'Company 2 Desc'),
         new Company(
+          3,
             'Company 3',
             'Company 3 Desc'),
   ];
