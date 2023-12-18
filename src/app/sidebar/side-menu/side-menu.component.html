@@ -1,0 +1,11 @@
+<ul class="menu">
+    <li *ngFor="let item of menuItems">
+      <a [routerLink]="item.route" *ngIf="!item.children">{{ item.label }}</a>
+      <a *ngIf="item.children" class="has-children">{{ item.label }}</a>
+      <ul *ngIf="item.children" class="submenu">
+        <li *ngFor="let child of item.children">
+          <a [routerLink]="child.route">{{ child.label }}</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
