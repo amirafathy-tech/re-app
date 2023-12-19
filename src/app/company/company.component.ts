@@ -1,6 +1,7 @@
 import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { CompanyService } from './company.service';
-import { ModalComponent } from '../shared/modal/modal.component';
+import { Company } from './company.model';
+import { Subscription } from 'rxjs/internal/Subscription';
 
 @Component({
   selector: 'app-company',
@@ -8,26 +9,29 @@ import { ModalComponent } from '../shared/modal/modal.component';
   styleUrl: './company.component.css',
   providers: [CompanyService]
 })
-export class CompanyComponent implements OnInit {
-  constructor() {
-  }
+export class CompanyComponent {
+
+  records: Company[];
+  private subscription: Subscription;
+  constructor(private companyService: CompanyService) { }
+
   ngOnInit() {
+    this.records = this.companyService.getRecords();
+    this.subscription = this.companyService.recordsChanged
+      .subscribe(
+        (records: Company[]) => {
+          this.records = records;
+        }
+      );
+  }
+  onEditItem(index: number) {
+    this.companyService.startedEditing.next(index);
   }
 
-  @ViewChild('confirmationModal') private modalComponent!: ModalComponent;
-
-  async openModal() {
-    await this.modalComponent.open();
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
-  open() {
-    this.openModal();
-  }
-
-  getConfirmationValue(value: any) {
-    if (value === 'Save click') {
-      console.log(value)
-    }
-  }
-
 
 }
+
+ 
