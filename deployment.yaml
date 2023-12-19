@@ -1,4 +1,3 @@
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -21,16 +20,14 @@ spec:
         kyma-grafana: enabled
     spec:
       containers:
-      - image: amirafathy/img1
-        name: contain1
-        resources: {}
-        ports:
-        - containerPort: 4200
-        env:
-         - secretRef:
-               name: angular
-               optional: true
-        
+        - image: amirafathy/img1
+          name: contain1
+          ports:
+            - containerPort: 4200
+          envFrom:
+            - secretRef:
+                name: angular
+                optional: true
 status: {}
 ---
 apiVersion: v1
@@ -42,14 +39,12 @@ metadata:
   name: ser1
 spec:
   ports:
-  - port: 4200
-    name: http
-    protocol: TCP
-    targetPort: 4200
+    - port: 4200
+      name: http
+      protocol: TCP
+      targetPort: 4200
   selector:
     app: angular
+  type: ClusterIP
 status:
   loadBalancer: {}
-
-      
-

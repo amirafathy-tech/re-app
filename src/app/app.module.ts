@@ -52,6 +52,14 @@ import { BuildingListComponent } from './building/building-list/building-list.co
 import { ProjectComponent } from './project/project.component';
 import { ProjectListComponent } from './project/project-list/project-list.component';
 import { CompanyEditComponent } from './company/company-edit/company-edit.component';
+import { ProjectAreaComponent } from './project/project-area/project-area.component';
+import { ProjectAreaEditComponent } from './project/project-area/project-area-edit/project-area-edit.component';
+import { BuildingAreaComponent } from './building/building-area/building-area.component';
+import { BuildingAreaEditComponent } from './building/building-area/building-area-edit/building-area-edit.component';
+import { UnitAreaComponent } from './unit/unit-area/unit-area.component';
+import { UnitAreaEditComponent } from './unit/unit-area/unit-area-edit/unit-area-edit.component';
+import { AreaComponent } from './area/area.component';
+import { AreaListComponent } from './area/area-list/area-list.component';
 
 
 
@@ -101,7 +109,15 @@ import { CompanyEditComponent } from './company/company-edit/company-edit.compon
     BuildingListComponent,
     ProjectComponent,
     ProjectListComponent,
-    CompanyEditComponent 
+    CompanyEditComponent,
+    ProjectAreaComponent,
+    ProjectAreaEditComponent,
+    BuildingAreaComponent,
+    BuildingAreaEditComponent,
+    UnitAreaComponent,
+    UnitAreaEditComponent,
+    AreaComponent,
+    AreaListComponent 
   
   ],
 

@@ -19,17 +19,24 @@ import { UsageTypeComponent } from './unit/usage-type/usage-type.component';
 import { UnitSubTypeComponent } from './unit/unit-sub-type/unit-sub-type.component';
 import { BuildingComponent } from './building/building.component';
 import { ProjectComponent } from './project/project.component';
+import { ProjectAreaComponent } from './project/project-area/project-area.component';
+import { BuildingAreaComponent } from './building/building-area/building-area.component';
+import { UnitAreaComponent } from './unit/unit-area/unit-area.component';
+import { AreaComponent } from './area/area.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'city', component: CityComponent },
   { path: 'company', component: CompanyComponent },
 
+  { path: 'area', component: AreaComponent },
+
   { path: 'building', component: BuildingComponent},
   { path: 'building-type', component: BuildingTypeComponent },
+  { path: 'building-area', component: BuildingAreaComponent },
 
   { path: 'project', component: ProjectComponent },
-  
+  { path: 'project-area', component: ProjectAreaComponent },
   { path: 'profit', component: ProfitComponent },
   { path: 'currency', component: CurrencyComponent },
 
@@ -45,8 +52,8 @@ const appRoutes: Routes = [
   { path: 'unit-usagetype', component: UsageTypeComponent},
   { path: 'unit-subtype', component: UnitSubTypeComponent},
   { path: 'unit-orientation', component: UnitOrientationComponent},
-
   { path: 'unit-fixture', component: UnitFixtureComponent},
+  { path: 'unit-area', component: UnitAreaComponent},
 
   // {
   //   path: 'unit',
